@@ -161,7 +161,7 @@ Open a Pull Request with a clear description of your updates.
 
 ## 🏆 Author
 
-Project: Pixel Vault Finder
+Project: Photo Vault
 Developer: [Vemula Padma Priya]
 GitHub: https://github.com/Padmapriya-vemula/
 
