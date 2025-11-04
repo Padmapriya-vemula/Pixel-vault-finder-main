@@ -1,6 +1,6 @@
 # 🖼️ Photo Vault
 
-Pixel Vault Finder is a **React-based Image Storage and Retrieval Web Application** using React framework powered by **Node.js** and **AWS S3**.  
+Photo Vault is a **React-based Image Storage and Retrieval Web Application** using React framework powered by **Node.js** and **AWS S3**.  
 The application allows users to **upload images** and **search them efficiently** through **AI-generated keyword tagging**.  
 By deep image scanning, the app uses **keyword assignment technology** that tags uploaded images with relevant descriptive keywords — enabling **fast and advanced in-app searches**.
 
@@ -126,7 +126,7 @@ npm run preview
 
 ## 🤝 Contribution Guidelines
 
-We welcome contributions to improve Pixel Vault Finder!
+We welcome contributions to improve Photo Vault!
 
 **Fork this repository.**
 
