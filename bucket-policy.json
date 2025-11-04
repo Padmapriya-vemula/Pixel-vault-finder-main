@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowPublicReadAccess",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": "arn:aws:s3:::image2analysis/*"
+        },
+        {
+            "Sid": "AllowPresignedURLAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::441198203439:user/image2analysis"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::image2analysis/*"
+        }
+    ]
+}

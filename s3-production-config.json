@@ -1,0 +1,58 @@
+{
+  "bucket_name": "imagestorageanalysis",
+  "region": "eu-west-1",
+  "bucket_policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "AllowPublicReadAccess",
+        "Effect": "Allow",
+        "Principal": "*",
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::imagestorageanalysis/*"
+      },
+      {
+        "Sid": "AllowIAMUserAccess",
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::441198203439:user/image2analysis"
+        },
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:DeleteObject",
+          "s3:ListBucket"
+        ],
+        "Resource": [
+          "arn:aws:s3:::imagestorageanalysis",
+          "arn:aws:s3:::imagestorageanalysis/*"
+        ]
+      }
+    ]
+  },
+  "cors_configuration": {
+    "CORSRules": [
+      {
+        "AllowedHeaders": ["*"],
+        "AllowedMethods": ["GET", "PUT", "POST", "DELETE", "HEAD"],
+        "AllowedOrigins": [
+          "https://pixel-vault-finder.vercel.app",
+          "https://pixel-vault-finder.onrender.com",
+          "http://localhost:3000",
+          "http://localhost:3001",
+          "http://localhost:5173"
+        ],
+        "ExposeHeaders": [
+          "ETag",
+          "x-amz-server-side-encryption",
+          "x-amz-request-id",
+          "x-amz-id-2",
+          "Content-Length",
+          "Content-Type"
+        ],
+        "MaxAgeSeconds": 3600
+      }
+    ]
+  }
+}
+

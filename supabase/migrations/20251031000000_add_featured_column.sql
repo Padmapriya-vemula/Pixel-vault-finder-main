@@ -1,0 +1,2 @@
+ALTER TABLE images 
+ADD COLUMN is_featured BOOLEAN DEFAULT FALSE;
